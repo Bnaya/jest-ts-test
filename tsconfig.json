@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "es6",
+        "target": "es6",
+        "noImplicitAny": true,
+        "inlineSourceMap": true,
+        "strictNullChecks": true,
+        "outDir": "ts-out",
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "types": [
+    		"@types/source-map-support"
+        ]
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
