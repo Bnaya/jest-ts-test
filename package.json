@@ -2,7 +2,10 @@
   "scripts": {
     "start": "concurrently 'yarn start-babel' 'yarn start-ts'",
     "start-babel": "babel ts-out --out-dir babel-out -w",
-    "start-ts": "tsc -w"
+    "start-ts": "tsc -w",
+    "test": "jest --no-cache",
+    "test:coverage": "jest --no-cache --coverage",
+    "test:watch": "jest --no-cache --watch --coverage"
   },
   "dependencies": {
     "@types/jest": "^16.0.3",
@@ -19,8 +22,8 @@
   },
   "jest": {
     "verbose": true,
-    "collectCoverage": true,
-    "collectCoverageFrom": [],
+    "_collectCoverage": false,
+    "_collectCoverageFrom": [],
     "transform": {
       ".(ts|tsx)": "<rootDir>/jestPreprocessor.js"
     },
